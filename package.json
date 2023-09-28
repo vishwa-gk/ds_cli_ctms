@@ -1,0 +1,23 @@
+{
+  "name": "headless-chrome-node-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm i -g @sap/dwc-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.tools.sap/HDACSM/headless-chrome-node-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "path": "^0.12.7",
+    "puppeteer": "^15.3.0"
+  }
+}

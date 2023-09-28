@@ -1,0 +1,7 @@
+{
+    "tenant": {
+        "host": "https://dwc-pm-demo.eu10.hcs.cloud.sap",
+        "publicfqdn": "dwc-pm-demo.eu10.hcs.cloud.sap",
+        "passcodeUrl": "https://dwc-pm-demo.authentication.eu10.hana.ondemand.com/passcode"
+    }
+}

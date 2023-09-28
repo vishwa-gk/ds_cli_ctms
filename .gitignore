@@ -1,0 +1,8 @@
+// .gitignore
+
+mta_archives/
+mta*
+node_modules
+
+# Remove unit test results
+srv/.testresults

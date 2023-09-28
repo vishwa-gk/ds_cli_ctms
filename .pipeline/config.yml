@@ -1,0 +1,38 @@
+###
+# This file configures the project "Piper" pipeline of your project.
+# For a reference of the configuration concept and available options, please have a look into its documentation.
+#
+# The documentation for the most recent pipeline version can always be found at:
+#    https://sap.github.io/jenkins-library/
+#
+# This is a YAML-file. YAML is an indentation-sensitive file format. Please make sure to properly indent changes to it.
+###
+
+### General project setup
+general:
+  inferBuildTool: true
+
+steps:
+  ###  Stage Build and Deploy set env variables
+  dockerExecute:
+    dockerEnvVars:
+      DWC_URL: 'https://xxx-xx-xxxx.euxx.xxx.cloud.sap/'
+      DWC_PASSCODE_URL: 'https://xxx-xx-xxxx.euxx.xxx.hana.ondemand.com/passcode'
+      HDIDEV: 'SP_PROJECTDEV_DWC_HDI'
+      HDIQA: 'SP_PROJECT_QA_DWC_HDI'
+      SPACE: 'SP_PROJECTDEV'
+      SPACEQA: 'SP_PROJECTQA'
+      LABELQA: 'DWC_QA'
+      ENTITIES: ''
+      SPACE_DEFINITION_FILE: 'SP_PROJECTDEV.json'
+      NEW_SPACE_DEFINITION_FILE:  'SP_PROJECTQA.json'
+
+  ###  Stage Validation, Execute npm script 'test' to validate db artifacts.
+  npmExecuteScripts:
+    buildDescriptorList:
+      - srv/package.json
+    runScripts: 
+      - "test"
+
+
+

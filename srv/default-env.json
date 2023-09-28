@@ -1,0 +1,31 @@
+
+{
+	"VCAP_SERVICES": {
+		"hana": [
+			{
+				"name": "hana-cli",
+				"label": "hana",
+				"tags": [
+					"hana",
+					"database",
+					"relational"
+				],
+				"plan": "",
+				"credentials": {
+					"password": "Ha?D2*#6*wR/d;9d+<N?5_B5=zK0S69L",
+					"port": "443",
+					"encrypt": true,
+					"schema": "SP_PROJECTDEV",
+					"db_hosts": [
+						{
+							"port": "443",
+							"host": "9ee99a70-9d98-481d-ab94-00b0417b66c5.hana.prod-eu10.hanacloud.ondemand.com"
+						}
+					],
+					"host": "9ee99a70-9d98-481d-ab94-00b0417b66c5.hana.prod-eu10.hanacloud.ondemand.com",
+					"user": "SP_PROJECTDEV#DWC_DEV"
+				}
+			}
+		]
+	}
+}
